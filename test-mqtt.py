@@ -18,24 +18,24 @@ settings = Settings(mqtt=mqtt_settings, entity=cover_info)
 def my_callback(client: Client, user_data, message: MQTTMessage):
     payload = message.payload.decode()
     if payload == "OPEN":
-	# let HA know that the cover is opening
-	my_cover.opening()
-	# call function to open cover
+	    # let HA know that the cover is opening
+	    my_cover.opening()
+	    # call function to open cover
         open_my_custom_cover()
         # Let HA know that the cover was opened
-	my_cover.open()
+	    my_cover.open()
     if payload == "CLOSE":
-	# let HA know that the cover is closing
-	my_cover.closing()
-	# call function to close the cover
+	    # let HA know that the cover is closing
+	    my_cover.closing()
+	    # call function to close the cover
         close_my_custom_cover()
         # Let HA know that the cover was closed
-	my_cover.closed()
+	    my_cover.closed()
     if payload == "STOP":
 	# call function to stop the cover
         stop_my_custom_cover()
         # Let HA know that the cover was stopped
-	my_cover.stopped()
+	    my_cover.stopped()
 
 # Define an optional object to be passed back to the callback
 user_data = "Some custom data"
