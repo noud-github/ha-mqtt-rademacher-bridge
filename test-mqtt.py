@@ -47,4 +47,4 @@ my_cover = Cover(settings, my_callback, user_data)
 # Set the initial state of the cover, which also makes it discoverable
 my_cover.closed()
 
-timesleep (30)
+time.sleep (30)
