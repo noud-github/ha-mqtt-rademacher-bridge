@@ -47,4 +47,19 @@ my_cover = Cover(settings, my_callback, user_data)
 # Set the initial state of the cover, which also makes it discoverable
 my_cover.closed()
 
-while True:
+def main():
+    while True:
+        res = raw_input("Please enter search criteria, or type 'exit' to exit the program: ")
+        if res=="exit":
+            break
+        else:
+            name,val = res.split()
+            if name not in friends:
+                print("I don't know anyone called {}".format(name))
+            elif val not in friends[name]:
+                print("{} doesn't have a {}".format(name, val))
+            else:
+                print("{}'s {} is {}".format(name, val, friends[name][val]))
+
+if __name__=="__main__":
+    main()
