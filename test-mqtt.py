@@ -1,4 +1,5 @@
 import os
+import time
 from dotenv import load_dotenv
 from ha_mqtt_discoverable import Settings
 from ha_mqtt_discoverable.sensors import Cover, CoverInfo
@@ -46,4 +47,4 @@ my_cover = Cover(settings, my_callback, user_data)
 # Set the initial state of the cover, which also makes it discoverable
 my_cover.closed()
 
-sleep (2000)
+timesleep (30)
