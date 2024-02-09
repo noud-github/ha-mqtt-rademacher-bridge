@@ -21,19 +21,19 @@ def my_callback(client: Client, user_data, message: MQTTMessage):
 	    # let HA know that the cover is opening
 	    my_cover.opening()
 	    # call function to open cover
-        open_my_custom_cover()
+        #open_my_custom_cover()
         # Let HA know that the cover was opened
 	    my_cover.open()
     if payload == "CLOSE":
 	    # let HA know that the cover is closing
 	    my_cover.closing()
 	    # call function to close the cover
-        close_my_custom_cover()
+        #close_my_custom_cover()
         # Let HA know that the cover was closed
 	    my_cover.closed()
     if payload == "STOP":
 	# call function to stop the cover
-        stop_my_custom_cover()
+        #stop_my_custom_cover()
         # Let HA know that the cover was stopped
 	    my_cover.stopped()
 
