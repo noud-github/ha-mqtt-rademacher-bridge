@@ -10,7 +10,7 @@
 ################################################################################
 # Settings
 verbose = False
-mqtt_server = "mqttpi.lan"
+mqtt_server = "<mqtt_server>"
 mqtt_port = 1883
 
 TRANSACTION_ID_START = 10000
@@ -22,10 +22,6 @@ commands = {
     "OPEN":  "01070100000000000000000000",
     "CLOSE": "01070300000000000000000000"
 }
-
-
-
-
 
 topicPrefixHomepilot = "homepilot/"
 topicPrefixHomeAssistant = "homeassistant/"
